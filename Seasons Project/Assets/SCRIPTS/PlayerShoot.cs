@@ -13,13 +13,28 @@ public class PlayerShoot : MonoBehaviour
     float timer = 0;
     [SerializeField]
     float shootDelay = 0.1f;
+    [SerializeField]
+    float bulletAmount = 10f;
+    [SerializeField]
+    bool bulletEnabled = true;
+    [SerializeField]
+    bool shootingEnabled = true;
+    [SerializeField]
+    float shootingReloads = 3;
+    [SerializeField]
+    bool BulletPackPickup = false;
     // Update is called once per frame
+    void Start()
+    {
+
+    }
     void Update()
     {
         timer += Time.deltaTime;
         //IF youc click
-        if (Input.GetButton("Fire1") && timer > shootDelay)
+        if (Input.GetButton("Fire1") && timer > shootDelay && bulletEnabled == true && shootingEnabled == true)
         {
+            bulletAmount -= 1;
             timer = 0;
             //shoot towards the mouse cursor
             Vector3 mousePos = Input.mousePosition;
@@ -33,6 +48,34 @@ public class PlayerShoot : MonoBehaviour
             //push the bullet towards the mouse
             bullet.GetComponent<Rigidbody2D>().velocity = mouseDir * bulletSpeed;
             Destroy(bullet, bulletLifetime);
+        }
+        else
+        {
+            if (bulletAmount <= 0)
+            {
+                bulletEnabled = false;
+                if (Input.GetKey(KeyCode.R) && shootingEnabled == true)
+                {
+                    bulletEnabled = true;
+                    bulletAmount = 10;
+                    shootingReloads -= 1;
+                }
+                else
+                {
+                    if (shootingReloads <= 0)
+                    {
+                        shootingEnabled = false;
+                    }
+                    else
+                    {
+                        if (BulletPackPickup == true)
+                        {
+                            shootingEnabled = true;
+                            bulletAmount = 10;
+                        }
+                    }
+                }
+            }
         }
     }
 }
