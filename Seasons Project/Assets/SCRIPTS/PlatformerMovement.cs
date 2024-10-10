@@ -11,10 +11,15 @@ public class PlatformerMovemenrt : MonoBehaviour
     [SerializeField]
     float jumpSpeed = 2f;
     bool grounded = false;
+    Rigidbody2D rb;
+    Animator anim;
+    SpriteRenderer spre;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        spre = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -33,6 +38,18 @@ public class PlatformerMovemenrt : MonoBehaviour
         {
             velocity.x = moveX * sprintSpeed;
             GetComponent<Rigidbody2D>().velocity = velocity;
+        }
+        anim.SetFloat("y", velocity.y);
+        anim.SetBool("grounded", grounded);
+        int x = (int)Input.GetAxisRaw("Horizontal");
+        anim.SetInteger("x", x);
+        if (x > 0)
+        {
+            spre.flipX = false;
+        }
+        else if (x < 0)
+        {
+            spre.flipX = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
