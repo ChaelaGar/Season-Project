@@ -26,18 +26,18 @@ public class PlatformerMovemenrt : MonoBehaviour
     void Update()
     {
         float moveX = Input.GetAxis("Horizontal");
-        Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
+        Vector2 velocity = rb.velocity;
         velocity.x = moveX * moveSpeed;
-        GetComponent<Rigidbody2D>().velocity = velocity;
+        rb.velocity = velocity;
         if (Input.GetButtonDown("Jump") && grounded)
         {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 100 * jumpSpeed));
+            rb.AddForce(new Vector2(0, 100 * jumpSpeed));
             grounded = false;
         }
         if (Input.GetButton("Fire3"))
         {
             velocity.x = moveX * sprintSpeed;
-            GetComponent<Rigidbody2D>().velocity = velocity;
+            rb.velocity = velocity;
         }
         anim.SetFloat("y", velocity.y);
         anim.SetBool("grounded", grounded);
