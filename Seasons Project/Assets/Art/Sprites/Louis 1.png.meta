@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5320eec4ee7184e4a905212b9a17d8d8
+guid: 2da9ae577c3c3414a8ebbaf61d6cdd56
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Louis_0
+      name: Louis 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c4d307acc1f0d941a484c07672f1d52
-      internalID: -207010745
+      spriteID: 25cf2de37b1d32f4084238063493d6c9
+      internalID: 1453151846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Louis_1
+      name: Louis 1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d4b24bfbdb7d8542bde6e22c0790e3c
-      internalID: -1632198827
+      spriteID: 4f97dd7de17f6424dbb38bdb8fd03408
+      internalID: 340037179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Louis_2
+      name: Louis 1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e70524341b0973e48bc3a0eea3f54bab
-      internalID: -905056243
+      spriteID: 0deb5a639e66d024991239316cd1b3d4
+      internalID: -1379667766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Louis_3
+      name: Louis 1_3
       rect:
         serializedVersion: 2
         x: 96
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a497aa4c13ad0dd4d946147a216404be
-      internalID: 1122792912
+      spriteID: fc78264866d0ad9499a8b957e3a6ea1b
+      internalID: -1960622106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Louis_4
+      name: Louis 1_4
       rect:
         serializedVersion: 2
         x: 128
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b8d0c15f011f82408e4aeef22762e69
-      internalID: -1758433587
+      spriteID: 685bff18348c1f24ea57c0a07c059031
+      internalID: 1216955676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Louis_5
+      name: Louis 1_5
       rect:
         serializedVersion: 2
         x: 160
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 354d30295ce5aa1408ca3714385b4eb9
-      internalID: -858587839
+      spriteID: 2f305c59b4ce3924f9cd0e0f813814b6
+      internalID: -368523790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Louis_6
+      name: Louis 1_6
       rect:
         serializedVersion: 2
         x: 192
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5f73bc0d33fd094c91a3a7207914fdc
-      internalID: -399292157
+      spriteID: 82a91766792b6dc439330fa99a4124dc
+      internalID: -1199000663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Louis_7
+      name: Louis 1_7
       rect:
         serializedVersion: 2
         x: 224
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f0d5a2388f71c348aace02cdce69463
-      internalID: 337975765
+      spriteID: 26955c3e34f6abd4d83c2ac422db54b3
+      internalID: -1159863702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Louis_8
+      name: Louis 1_8
       rect:
         serializedVersion: 2
         x: 256
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3662a478dfe7dde4898e6e22d1db984c
-      internalID: -1936902977
+      spriteID: 133dd1a012b7cf14e8e55149c8809449
+      internalID: -1295792202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Louis_9
+      name: Louis 1_9
       rect:
         serializedVersion: 2
         x: 288
@@ -300,8 +300,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 093203d7552d0b74daa8752772f0ab95
-      internalID: 1486723931
+      spriteID: 83219332dea975346b6de2aceba34e02
+      internalID: -427892251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Louis 1_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff994df34b27ff9439733f26cc4e0fd6
+      internalID: 1440282020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Louis 1_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98e401393972b34fb165ab6e9061461
+      internalID: -1237712760
       vertices: []
       indices: 
       edges: []
@@ -317,16 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Louis_0: -207010745
-      Louis_1: -1632198827
-      Louis_2: -905056243
-      Louis_3: 1122792912
-      Louis_4: -1758433587
-      Louis_5: -858587839
-      Louis_6: -399292157
-      Louis_7: 337975765
-      Louis_8: -1936902977
-      Louis_9: 1486723931
+      Louis 1_0: 1453151846
+      Louis 1_1: 340037179
+      Louis 1_10: 1440282020
+      Louis 1_11: -1237712760
+      Louis 1_2: -1379667766
+      Louis 1_3: -1960622106
+      Louis 1_4: 1216955676
+      Louis 1_5: -368523790
+      Louis 1_6: -1199000663
+      Louis 1_7: -1159863702
+      Louis 1_8: -1295792202
+      Louis 1_9: -427892251
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
