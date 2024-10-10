@@ -21,15 +21,11 @@ public class BulletSpawn : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
         timer += Time.deltaTime;
         Vector3 bulletPack = transform.position;
         bulletPack.z = 0;
         bulletPack.Normalize();
-        if (Spawned == false && pickedUp == false && timer > spawnDelay)
-        {
-            GameObject bulletPack = Instantiate(prefab, transform.position, Quaternion.identity);
-        }
     }
 }
