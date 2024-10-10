@@ -28,6 +28,7 @@ public class BulletSpawn : MonoBehaviour
     // Update is called once per frame
    void Update()
     {
+        Debug.Log(bulletPack);
         timer += Time.deltaTime;
         if (bulletPack != null && timer > spawnDelay)
         {

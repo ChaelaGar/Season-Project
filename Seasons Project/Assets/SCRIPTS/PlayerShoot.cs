@@ -58,7 +58,7 @@ public class PlayerShoot : MonoBehaviour
         }
         else
         {
-            if (bulletAmount <= 0)
+            if (bulletAmount >= 0)
             {
                 bulletEnabled = false;
                 if (Input.GetKey(KeyCode.R) && shootingEnabled == true)
