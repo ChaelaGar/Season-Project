@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
@@ -27,6 +29,11 @@ public class PlayerShoot : MonoBehaviour
     void Start()
     {
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
     }
     void Update()
     {

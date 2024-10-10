@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletSpawn : MonoBehaviour
 {
+    [SerializeField]
     GameObject prefab;
     [SerializeField]
     float timer = 0;
     [SerializeField]
     float spawnDelay = 0.2f;
     [SerializeField]
-    bool Spawned = true;
+    float bulletPackLifetime = 0.5f;
+    [SerializeField]
+    bool Spawned = false;
     [SerializeField]
     bool pickedUp = false;
-
+    GameObject bulletPack;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +29,17 @@ public class BulletSpawn : MonoBehaviour
    void Update()
     {
         timer += Time.deltaTime;
-        Vector3 bulletPack = transform.position;
-        bulletPack.z = 0;
-        bulletPack.Normalize();
+        if (bulletPack != null && timer > spawnDelay)
+        {
+            bulletPack = Instantiate(prefab, transform.position, Quaternion.identity);
+            timer = 0;
+            Destroy(bulletPack, bulletPackLifetime);
+        }
+        if (bulletPack == null)
+        {
+            timer = 0;
+        }
     }
 }
+
+
