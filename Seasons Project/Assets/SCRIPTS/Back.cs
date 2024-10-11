@@ -2,26 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-public class NewBehaviourScript : MonoBehaviour
-{
-    [SerializeField]
-    string leveltoload = "Spring 1";
-    // Start is called before the first frame update
 
+public class Back : MonoBehaviour
+{
+    
+    // Start is called before the first frame update
 
     public void LoadNextInBuild()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 14);
     }
 
-    public void QuitGame()
+    // Update is called once per frame
+    void Update()
     {
-        Application.Quit();
+        
     }
-
-   
-
-
-        }
+}
