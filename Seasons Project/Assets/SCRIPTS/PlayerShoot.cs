@@ -31,10 +31,6 @@ public class PlayerShoot : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
     void Update()
     {
         timer += Time.deltaTime;
@@ -58,7 +54,7 @@ public class PlayerShoot : MonoBehaviour
         }
         else
         {
-            if (bulletAmount >= 0)
+            if (bulletAmount <= 0)
             {
                 bulletEnabled = false;
                 if (Input.GetKey(KeyCode.R) && shootingEnabled == true)

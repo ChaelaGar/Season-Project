@@ -10,7 +10,14 @@ public class PlatformerMovemenrt : MonoBehaviour
     float sprintSpeed = 10f;
     [SerializeField]
     float jumpSpeed = 2f;
+    [SerializeField]
+    float slideSpeed = 2f;
     bool grounded = false;
+    bool sliding = false;
+    [SerializeField]
+    float forceX = 100;
+    [SerializeField]
+    float forceY = 0;
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer spre;
@@ -58,11 +65,22 @@ public class PlatformerMovemenrt : MonoBehaviour
         {
             grounded = true;
         }
+        if (collision.gameObject.layer == 7)
+        {
+            sliding = true;
+            grounded = true;
+            rb.AddForce(new Vector2(forceX, forceY * slideSpeed));
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.layer == 6)
         {
+            grounded = false;
+        }
+        if (collision.gameObject.layer == 7)
+        {
+            sliding = false;
             grounded = false;
         }
     }
