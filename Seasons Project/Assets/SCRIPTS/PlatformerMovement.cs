@@ -14,6 +14,7 @@ public class PlatformerMovemenrt : MonoBehaviour
     float slideSpeed = 2f;
     bool grounded = false;
     bool sliding = false;
+    bool dJump = false;
     [SerializeField]
     float forceX = 100;
     [SerializeField]
@@ -40,8 +41,14 @@ public class PlatformerMovemenrt : MonoBehaviour
         {
             rb.AddForce(new Vector2(0, 100 * jumpSpeed));
             grounded = false;
+            dJump = true;
         }
-        if (Input.GetButton("Fire3"))
+        else if (Input.GetButtonDown("Jump") && dJump == true)
+        {
+            rb.AddForce(new Vector2(0, 100 * jumpSpeed));
+            dJump = false;
+        }
+            if (Input.GetButton("Fire3"))
         {
             velocity.x = moveX * sprintSpeed;
             rb.velocity = velocity;
