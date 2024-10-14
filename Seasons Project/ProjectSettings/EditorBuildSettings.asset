@@ -6,15 +6,48 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: fde2c26f0ba33f643b3ca263ffacb081
   - enabled: 1
     path: Assets/Scenes/S_Scene.unity
     guid: b5275dbe5aa84da419bc11976bbaaffe
   - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
     path: Assets/Scenes/ChaelasScene.unity
     guid: 79549d025b8f99f4ea68e71dae46a3f5
+  - enabled: 1
+    path: Assets/Scenes/Spring 1.unity
+    guid: 724eff336db8e9f469a502b0434d7322
+  - enabled: 1
+    path: Assets/Scenes/Spring 2.unity
+    guid: 3ab53b19b2cdadf489f03b3135b1b330
+  - enabled: 1
+    path: Assets/Scenes/Summer 1.unity
+    guid: 7da7d170478987e4ba1b1c2b6718fd2b
+  - enabled: 1
+    path: Assets/Scenes/Summer 2.unity
+    guid: 94f4789f09560ac4295272dd894096c9
+  - enabled: 1
+    path: Assets/Scenes/Fall 1.unity
+    guid: 790c83b7d2c01eb4cb57a6b3c2330d40
+  - enabled: 1
+    path: Assets/Scenes/Fall 2.unity
+    guid: 5c3025a745447b1498e360b0a7c10c5c
+  - enabled: 1
+    path: Assets/Scenes/Winter 1.unity
+    guid: 9a2c34e82ab73624e926ea2788781e31
+  - enabled: 1
+    path: Assets/Scenes/Winter 2.unity
+    guid: d184d18fc22c5c344886e727f8efff9d
+  - enabled: 1
+    path: Assets/Scenes/Level 9.unity
+    guid: c3a4b3f1c2650e64ab797e7ae1e2651f
+  - enabled: 1
+    path: Assets/Scenes/Level 10.unity
+    guid: 21277872d1d5f71449b4fc708263fce8
+  - enabled: 1
+    path: Assets/Scenes/HTP.unity
+    guid: 01ce90fbe15ffe74abe4a606e2713fa8
   m_configObjects: {}

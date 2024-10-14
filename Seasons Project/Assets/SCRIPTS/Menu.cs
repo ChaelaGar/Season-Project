@@ -21,10 +21,7 @@ public class NewBehaviourScript : MonoBehaviour
         Application.Quit();
     }
 
-    public void HowToPlay()
-    {
-
-    }
+   
 
 
         }
