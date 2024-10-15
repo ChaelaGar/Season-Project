@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class GroundorSloped : MonoBehaviour
@@ -9,7 +8,7 @@ public class GroundorSloped : MonoBehaviour
     [SerializeField]
     bool ground;
     [SerializeField]
-    bool slope;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +26,20 @@ public class GroundorSloped : MonoBehaviour
         {
             rb.gravityScale = 30f;
         }
-        
-  void OnTriggerEnter2D(Collider2D collision)
+        void OnTriggerEnter2D(Collider2D collision)
         {
+            if (collision.gameObject.layer == 6)
+            {
+                ground = true;
+                slope = false;
+            }
+            if (collision.gameObject.layer == 7)
+            {
+               
+            }
 
         }
+
 
     }
 }
