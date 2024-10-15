@@ -377,6 +377,11 @@ MonoBehaviour:
   moveSpeed: 5
   sprintSpeed: 10
   jumpSpeed: 4
+  slideSpeed: 2
+  grounded: 0
+  dJump: 0
+  forceX: 100
+  forceY: 0
 --- !u!95 &2194306197202086299
 Animator:
   serializedVersion: 5
