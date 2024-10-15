@@ -16,8 +16,9 @@ public class PlatformerMovemenrt : MonoBehaviour
     [SerializeField]
     bool grounded = false;
     [SerializeField]
-    bool sliding = false;
+ 
     bool dJump = false;
+    bool slope = false;
     float gravityCap = 3f;
     [SerializeField]
     float forceX = 100;
@@ -69,17 +70,26 @@ public class PlatformerMovemenrt : MonoBehaviour
         {
             spre.flipX = true;
         }
+        if (grounded == true || slope == false)
+        {
+            rb.gravityScale = 1f;
+        }
+        else if (slope == true)
+        {
+            rb.gravityScale = 40f;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 6)
         {
             grounded = true;
+            slope = false;
         }
         if (collision.gameObject.layer == 7)
         {
-            sliding = true;
-            grounded = true;
+            slope = true;
+            grounded = false;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -90,8 +100,8 @@ public class PlatformerMovemenrt : MonoBehaviour
         }
         if (collision.gameObject.layer == 7)
         {
-            sliding = false;
-            grounded = false;
+            slope = false;
+          
         }
     }
 }

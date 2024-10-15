@@ -467,11 +467,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 68281e04de23ca1488b7a0a6124f3151, type: 2}
     - target: {fileID: 2834359979775156719, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1
+      value: -4.03
       objectReference: {fileID: 0}
     - target: {fileID: 2834359979775156719, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.14
+      value: 7.61
       objectReference: {fileID: 0}
     - target: {fileID: 2834359979775156719, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20162,8 +20162,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.9234865, y: 4.0947814}
-  - {x: 6.0451765, y: -4.0060577}
+  - {x: -2.0645258, y: 4.028963}
+  - {x: 6.0298605, y: -4.0826316}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
