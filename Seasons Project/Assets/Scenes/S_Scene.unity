@@ -1751,6 +1751,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6585949408514642209, guid: e55d2fc1c5336be409a2695a2fe22d8e, type: 3}
   m_PrefabInstance: {fileID: 5568485865491008326}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &735006132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1288051201898522367, guid: 949d2c43e4265d0499a9fecc9d618a8c, type: 3}
+  m_PrefabInstance: {fileID: 8977966504104600258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &735006138
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735006132}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4aa9588c544b5ff4fa0b3aacbacdc50d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &854355219
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,6 +3128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DumbEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8756506586535981539, guid: 8662e50de25b62a45bb6fe4efd06a5e3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4aa9588c544b5ff4fa0b3aacbacdc50d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3394,7 +3424,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1288051201898522367, guid: 949d2c43e4265d0499a9fecc9d618a8c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 735006138}
   m_SourcePrefab: {fileID: 100100000, guid: 949d2c43e4265d0499a9fecc9d618a8c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

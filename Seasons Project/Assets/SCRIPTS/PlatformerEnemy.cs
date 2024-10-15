@@ -10,6 +10,7 @@ public class PlatformerEnemy : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private Transform currentPoint;
+    private SpriteRenderer spre;
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,7 @@ public class PlatformerEnemy : MonoBehaviour
             flip();
             currentPoint = pointB.transform;
         }
+      
     }
     private void flip()
     {
