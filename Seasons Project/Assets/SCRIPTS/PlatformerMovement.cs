@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlatformerMovemenrt : MonoBehaviour
@@ -12,9 +13,12 @@ public class PlatformerMovemenrt : MonoBehaviour
     float jumpSpeed = 2f;
     [SerializeField]
     float slideSpeed = 2f;
+    [SerializeField]
     bool grounded = false;
+    [SerializeField]
     bool sliding = false;
     bool dJump = false;
+    float gravityCap = 3f;
     [SerializeField]
     float forceX = 100;
     [SerializeField]
@@ -48,7 +52,7 @@ public class PlatformerMovemenrt : MonoBehaviour
             rb.AddForce(new Vector2(0, 100 * jumpSpeed));
             dJump = false;
         }
-            if (Input.GetButton("Fire3"))
+        if (Input.GetButton("Fire3"))
         {
             velocity.x = moveX * sprintSpeed;
             rb.velocity = velocity;
@@ -76,7 +80,6 @@ public class PlatformerMovemenrt : MonoBehaviour
         {
             sliding = true;
             grounded = true;
-            rb.AddForce(new Vector2(forceX, forceY * slideSpeed));
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
