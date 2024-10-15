@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - AmmoPack
   - Slope
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
