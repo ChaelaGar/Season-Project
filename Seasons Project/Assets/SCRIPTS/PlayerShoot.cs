@@ -25,6 +25,8 @@ public class PlayerShoot : MonoBehaviour
     float shootingReloads = 3f;
     [SerializeField]
     bool BulletPackPickup = false;
+    [SerializeField]
+    bool isShooting = false;
     // Update is called once per frame
     void Start()
     {
