@@ -27,6 +27,7 @@ public class PlatformerMovemenrt : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer spre;
+    BulletSpawn bulletSpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -101,7 +102,6 @@ public class PlatformerMovemenrt : MonoBehaviour
         if (collision.gameObject.layer == 7)
         {
             slope = false;
-          
         }
     }
 }
