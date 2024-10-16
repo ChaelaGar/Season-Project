@@ -12,7 +12,7 @@ public class PlatformerMovemenrt : MonoBehaviour
     [SerializeField]
     float jumpSpeed = 2f;
     [SerializeField]
-    float slideSpeed = 2f;
+    float slideSpeed = 40f;
     [SerializeField]
     bool grounded = false;
     [SerializeField]
@@ -76,7 +76,7 @@ public class PlatformerMovemenrt : MonoBehaviour
         }
         else if (slope == true)
         {
-            rb.gravityScale = 40f;
+            rb.gravityScale = slideSpeed;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

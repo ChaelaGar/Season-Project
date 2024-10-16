@@ -218,8 +218,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.22352937, g: 0.93333334, b: 0.8486071, a: 1}
+  m_Sprite: {fileID: 340037179, guid: 2da9ae577c3c3414a8ebbaf61d6cdd56, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -243,8 +243,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 2.92
+  m_GravityScale: 30
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -288,8 +288,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0.013563395, y: -0.08389372}
+  m_Size: {x: 0.33181238, y: 0.7935287}
   m_Direction: 0
 --- !u!70 &4653729773479939604
 CapsuleCollider2D:
@@ -323,8 +323,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0022854675, y: -0.88877606}
-  m_Size: {x: 0.5289008, y: 0.22245291}
+  m_Offset: {x: -0.03257171, y: -0.5172032}
+  m_Size: {x: 0.33512637, y: 0.22957733}
   m_Direction: 1
 --- !u!114 &8289689977269336043
 MonoBehaviour:
@@ -376,8 +376,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   sprintSpeed: 10
-  jumpSpeed: 4
-  slideSpeed: 2
+  jumpSpeed: 2
+  slideSpeed: 40
   grounded: 0
   dJump: 0
   forceX: 100
@@ -392,7 +392,7 @@ Animator:
   m_GameObject: {fileID: 1044909005808068312}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68281e04de23ca1488b7a0a6124f3151, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
