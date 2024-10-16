@@ -9,6 +9,7 @@ TagManager:
   - AmmoPack
   - Slope
   - CheckPoint
+  - Flag
   layers:
   - Default
   - TransparentFX

@@ -50,4 +50,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HTP.unity
     guid: 01ce90fbe15ffe74abe4a606e2713fa8
+  - enabled: 1
+    path: Assets/Scenes/CCredit.unity
+    guid: b3a584ec4de9563408010ccaa697643f
+  - enabled: 1
+    path: Assets/Scenes/ACredit.unity
+    guid: 8f021d8ba516c77458d39d44a3ed78e2
+  - enabled: 1
+    path: Assets/Scenes/SCredit.unity
+    guid: cdf1f19587ee30c418f0927acc903d57
   m_configObjects: {}
