@@ -28,9 +28,11 @@ public class PlayerShoot : MonoBehaviour
     bool BulletPackPickup = false;
     [SerializeField]
     bool isShooting = false;
+    Animator anim;
     // Update is called once per frame
     void Start()
     {
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -39,6 +41,7 @@ public class PlayerShoot : MonoBehaviour
         //IF youc click
         if (Input.GetButton("Fire1") && timer > shootDelay && bulletEnabled == true && shootingEnabled == true)
         {
+            isShooting = true;
             bulletAmount -= 1;
             timer = 0;
             //shoot towards the mouse cursor
@@ -53,6 +56,7 @@ public class PlayerShoot : MonoBehaviour
             //push the bullet towards the mouse
             bullet.GetComponent<Rigidbody2D>().velocity = mouseDir * bulletSpeed;
             Destroy(bullet, bulletLifetime);
+            isShooting = false;
         }
         else
         {
@@ -74,6 +78,7 @@ public class PlayerShoot : MonoBehaviour
                 }
             }
         }
+        anim.SetBool("atk", isShooting);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
