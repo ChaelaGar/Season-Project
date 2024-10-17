@@ -218,7 +218,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 340037179, guid: 2da9ae577c3c3414a8ebbaf61d6cdd56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -242,10 +242,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.8
   m_LinearDrag: 0
-  m_AngularDrag: 2.92
-  m_GravityScale: 30
+  m_AngularDrag: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -289,8 +289,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005493641, y: -0.07252547}
-  m_Size: {x: 0.31567287, y: 0.7707922}
+  m_Offset: {x: 0.013312817, y: -0.070961684}
+  m_Size: {x: 0.30003452, y: 0.7676646}
   m_Direction: 0
 --- !u!70 &4653729773479939604
 CapsuleCollider2D:
@@ -324,8 +324,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.015848521, y: -0.4849233}
-  m_Size: {x: 0.36740714, y: 0.16501738}
+  m_Offset: {x: 0.015848521, y: -0.48335946}
+  m_Size: {x: 0.36740717, y: 0.16188969}
   m_Direction: 1
 --- !u!114 &8289689977269336043
 MonoBehaviour:
@@ -363,6 +363,7 @@ MonoBehaviour:
   shootingEnabled: 1
   shootingReloads: 3
   BulletPackPickup: 0
+  isShooting: 0
 --- !u!114 &2966987845262270232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   sprintSpeed: 10
-  jumpSpeed: 2
+  jumpSpeed: 4
   slideSpeed: 40
   grounded: 0
   dJump: 0
@@ -416,4 +417,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0141182987dfa354eb1cb938e5d5320d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leveltoload: Spring 1
+  leveltoload: Spring 2

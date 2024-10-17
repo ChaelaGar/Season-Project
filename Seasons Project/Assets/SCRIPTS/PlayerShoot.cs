@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -25,10 +26,11 @@ public class PlayerShoot : MonoBehaviour
     float shootingReloads = 3f;
     [SerializeField]
     bool BulletPackPickup = false;
+    [SerializeField]
+    bool isShooting = false;
     // Update is called once per frame
     void Start()
     {
-
     }
 
     void Update()
@@ -79,6 +81,16 @@ public class PlayerShoot : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "AmmoPack" && shootingReloads >= 0)
+        {
+            shootingReloads = 3;
+            shootingEnabled = true;
+            bulletEnabled = true;
+            bulletAmount = 10;
         }
     }
 }
