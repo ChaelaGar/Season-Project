@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SCredit.unity
     guid: cdf1f19587ee30c418f0927acc903d57
+  - enabled: 1
+    path: Assets/Scenes/Secret.unity
+    guid: 20c8476cff6721d4cb0c94174a5e07ff
   m_configObjects: {}
