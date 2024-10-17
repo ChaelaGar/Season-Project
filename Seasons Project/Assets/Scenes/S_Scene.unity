@@ -3084,6 +3084,10 @@ PrefabInstance:
       propertyPath: pointB
       value: 
       objectReference: {fileID: 7861569}
+    - target: {fileID: 1884075710957240590, guid: 8662e50de25b62a45bb6fe4efd06a5e3, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 61b5cb440b84bb347adef5d2f83589f6, type: 2}
     - target: {fileID: 3031195912178095959, guid: 8662e50de25b62a45bb6fe4efd06a5e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.03
@@ -3123,6 +3127,10 @@ PrefabInstance:
     - target: {fileID: 3031195912178095959, guid: 8662e50de25b62a45bb6fe4efd06a5e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699280468755764654, guid: 8662e50de25b62a45bb6fe4efd06a5e3, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5534924004831339271, guid: 8662e50de25b62a45bb6fe4efd06a5e3, type: 3}
       propertyPath: m_Name
