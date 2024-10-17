@@ -71,21 +71,13 @@ public class PlayerShoot : MonoBehaviour
                     {
                         shootingEnabled = false;
                     }
-                    else
-                    {
-                        if (BulletPackPickup == true)
-                        {
-                            shootingEnabled = true;
-                            bulletAmount = 10;
-                        }
-                    }
                 }
             }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "AmmoPack" && shootingReloads >= 0)
+        if (collision.gameObject.tag == "AmmoPack" && shootingReloads <= 0 && bulletAmount <= 0 && shootingEnabled == false && bulletEnabled == false)
         {
             shootingReloads = 3;
             shootingEnabled = true;
