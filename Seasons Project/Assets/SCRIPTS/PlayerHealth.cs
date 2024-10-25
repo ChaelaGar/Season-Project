@@ -11,17 +11,25 @@ public class PlayerHealth : MonoBehaviour
     string levelToLoad = "Lose";
     float maxHP;
     [SerializeField]
+    float healthRestart = 10;
+    [SerializeField]
     Image healthBar;
     // Start is called before the first frame update
     void Start()
     {
+        health = healthRestart;
         maxHP = health;
         healthBar.fillAmount = health / maxHP;
     }
     // Update is called once per frame
     void Update()
     {
-        
+        healthBar.fillAmount = health / maxHP;
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //SceneManager.LoadScene(levelToLoad);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -69,7 +69,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2.9382546
+  orthographic size: 4.7862415
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -324,8 +324,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011017267, y: -0.48335946}
-  m_Size: {x: 0.24179658, y: 0.16188969}
+  m_Offset: {x: 0.006465356, y: -0.48335946}
+  m_Size: {x: 0.2047667, y: 0.16188969}
   m_Direction: 1
 --- !u!114 &8289689977269336043
 MonoBehaviour:
