@@ -6,6 +6,8 @@ public class PlantMunchAttack : MonoBehaviour
 {
     float timer = 0;
     float attackTime = 1.5f;
+    [SerializeField]
+    public PlayerHealth PlayerH;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class PlantMunchAttack : MonoBehaviour
    
             if (timer >= attackTime) 
         {
+            Debug.Log("BAM");
             
         }
     }
