@@ -28,17 +28,22 @@ public class PlatformerMovemenrt : MonoBehaviour
     Animator anim;
     SpriteRenderer spre;
     BulletSpawn bulletSpawn;
+    float dirX;
+    AudioSource audioSrc;
+    bool isMoving = false;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spre = GetComponent<SpriteRenderer>();
+        audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         float moveX = Input.GetAxis("Horizontal");
         Vector2 velocity = rb.velocity;
         velocity.x = moveX * moveSpeed;
@@ -80,7 +85,24 @@ public class PlatformerMovemenrt : MonoBehaviour
         {
             rb.gravityScale = slideSpeed;
         }
+
+        dirX = Input.GetAxis("Horizontal") * moveSpeed;
+
+        if (rb.velocity.x != 0)
+            isMoving = true;
+        else 
+            isMoving = false;
+        if (isMoving)
+        {
+            if (!audioSrc.isPlaying)
+                audioSrc.Play();
+        }
+        else 
+            audioSrc.Stop();
     }
+
+    
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 6)
@@ -104,5 +126,8 @@ public class PlatformerMovemenrt : MonoBehaviour
         {
             slope = false;
         }
+
+
     }
+    
 }
