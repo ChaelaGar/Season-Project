@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4652992914771dd48a611aa527103db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dead: {fileID: 3660597}
+  Mhealth: {fileID: 3660597}
   PlayerH: {fileID: 342300488}
   AnimationTimeLength: 0.4
 --- !u!95 &3660596
