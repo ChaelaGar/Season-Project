@@ -10,20 +10,20 @@ public class PlantMunchHealth : MonoBehaviour
     float maxeHP;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "PlayerBullet")
+        if (collision.gameObject.tag == "PlayerAmmo")
         {
 
-            enemyHealth -= 1;
+            enemyHealth = enemyHealth -= 1;
             if (enemyHealth <= 0)
             {
 
@@ -31,4 +31,5 @@ public class PlantMunchHealth : MonoBehaviour
             }
         }
     }
+
 }

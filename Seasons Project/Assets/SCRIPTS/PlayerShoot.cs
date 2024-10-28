@@ -29,6 +29,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     bool isShooting = false;
     Animator anim;
+    float AnimTimeLength = 2f;
     // Update is called once per frame
     void Start()
     {
@@ -65,6 +66,7 @@ public class PlayerShoot : MonoBehaviour
                 bulletEnabled = false;
                 if (Input.GetKey(KeyCode.R) && shootingEnabled == true)
                 {
+                    StartCoroutine(PlayLAnimation());
                     bulletEnabled = true;
                     bulletAmount = 10;
                     shootingReloads -= 1;
@@ -84,10 +86,17 @@ public class PlayerShoot : MonoBehaviour
     {
         if (collision.gameObject.tag == "AmmoPack" && shootingReloads <= 0 && bulletAmount <= 0 && shootingEnabled == false && bulletEnabled == false)
         {
+            
             shootingReloads = 3;
             shootingEnabled = true;
             bulletEnabled = true;
             bulletAmount = 10;
         }
+    }
+    private IEnumerator PlayLAnimation()
+    {
+        anim.Play("LouisThrow");
+        yield return new WaitForSeconds(AnimTimeLength);
+
     }
 }
