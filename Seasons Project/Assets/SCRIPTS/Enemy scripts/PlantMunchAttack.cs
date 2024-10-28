@@ -7,7 +7,9 @@ public class PlantMunchAttack : MonoBehaviour
 {
     float timer = 0;
     float attackTime = 0.5f;
+    float dmg = 1f;
     [SerializeField]
+    public PlantMunchHealth Dead;
     public PlayerHealth PlayerH;
     Animator animator;
     [SerializeField]
@@ -17,6 +19,7 @@ public class PlantMunchAttack : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -27,8 +30,8 @@ public class PlantMunchAttack : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
 
-
-        if (timer >= attackTime && collision.gameObject.tag == "Player")
+     
+      if (timer >= attackTime && collision.gameObject.tag == "Player")
         {
             StartCoroutine(PlayAnimation());
             Debug.Log("BAM");
@@ -37,6 +40,7 @@ public class PlantMunchAttack : MonoBehaviour
            
         }
     }
+   
     IEnumerator PlayAnimation()
     {
         animator.Play("attack");

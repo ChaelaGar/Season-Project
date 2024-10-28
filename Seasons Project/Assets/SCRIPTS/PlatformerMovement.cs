@@ -92,7 +92,7 @@ public class PlatformerMovemenrt : MonoBehaviour
             isMoving = true;
         else 
             isMoving = false;
-        if (isMoving)
+        if (isMoving && grounded && slope == false)
         {
             if (!audioSrc.isPlaying)
                 audioSrc.Play();
