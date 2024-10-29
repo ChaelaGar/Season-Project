@@ -443,22 +443,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flag
       objectReference: {fileID: 0}
-    - target: {fileID: 694740127053762296, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
-      propertyPath: m_Size.x
-      value: 44.88774
-      objectReference: {fileID: 0}
-    - target: {fileID: 694740127053762296, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
-      propertyPath: m_Size.y
-      value: 23.776245
-      objectReference: {fileID: 0}
-    - target: {fileID: 694740127053762296, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
-      propertyPath: m_Offset.x
-      value: -22.275444
-      objectReference: {fileID: 0}
-    - target: {fileID: 694740127053762296, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
-      propertyPath: m_Offset.y
-      value: 3.4490585
-      objectReference: {fileID: 0}
     - target: {fileID: 1809796318111705013, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
       propertyPath: m_LocalPosition.x
       value: 225.25362
@@ -498,6 +482,10 @@ PrefabInstance:
     - target: {fileID: 1809796318111705013, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147461358817846638, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
+      propertyPath: leveltoload
+      value: Fall 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1145,11 +1133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2834359979775156719, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.4
+      value: 175.6
       objectReference: {fileID: 0}
     - target: {fileID: 2834359979775156719, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -37
+      value: -83.9
       objectReference: {fileID: 0}
     - target: {fileID: 2834359979775156719, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1182,10 +1170,6 @@ PrefabInstance:
     - target: {fileID: 2834359979775156719, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5847206063372438283, guid: e1451d99818bf714aa71fd44287af149, type: 3}
-      propertyPath: leveltoload
-      value: Autumn1
       objectReference: {fileID: 0}
     - target: {fileID: 8289689977269336043, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: healthBar
