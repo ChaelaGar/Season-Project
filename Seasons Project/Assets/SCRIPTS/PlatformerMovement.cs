@@ -91,7 +91,9 @@ public class PlatformerMovemenrt : MonoBehaviour
         }
         else if (slope == true)
         {
-            rb.gravityScale = slideSpeed;
+            GravTime += 0.1f;
+            rb.gravityScale = slideSpeed + GravTime;
+
         }
 
         dirX = Input.GetAxis("Horizontal") * moveSpeed;
@@ -130,6 +132,7 @@ public class PlatformerMovemenrt : MonoBehaviour
         {
             slope = true;
             grounded = false;
+            GravTime += 0.1f;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
