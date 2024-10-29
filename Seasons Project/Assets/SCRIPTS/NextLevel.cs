@@ -22,7 +22,7 @@ public class NextLevel : MonoBehaviour
     {
         Debug.Log(collision.gameObject.name);
         //IF player touches Dorito, load scene win
-        if(collision.gameObject.tag == "Flag" )
+        if(collision.gameObject.tag == "Player" )
         {
            
             
