@@ -16,7 +16,7 @@ public class PlatformerMovemenrt : MonoBehaviour
     [SerializeField]
     bool grounded = false;
     [SerializeField]
- 
+
     bool dJump = false;
     bool slope = false;
     float gravityCap = 3f;
@@ -31,6 +31,8 @@ public class PlatformerMovemenrt : MonoBehaviour
     float dirX;
     AudioSource audioSrc;
     bool isMoving = false;
+    [SerializeField]
+    float SoundTimeLength = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -95,12 +97,19 @@ public class PlatformerMovemenrt : MonoBehaviour
         if (isMoving && grounded && slope == false)
         {
             if (!audioSrc.isPlaying)
-                audioSrc.Play();
+          
+            StartCoroutine(PlayFootStep());
         }
-        else 
-            audioSrc.Stop();
+       else 
+           audioSrc.Stop();
     }
 
+    IEnumerator PlayFootStep()
+    {
+        audioSrc.Play();
+        yield return new WaitForSeconds(SoundTimeLength);
+        audioSrc.Stop();
+    }
     
 
     private void OnTriggerStay2D(Collider2D collision)

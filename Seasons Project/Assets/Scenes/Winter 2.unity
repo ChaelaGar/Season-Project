@@ -371,6 +371,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2966987845262270232, guid: e1451d99818bf714aa71fd44287af149, type: 3}
+      propertyPath: StepStall
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966987845262270232, guid: e1451d99818bf714aa71fd44287af149, type: 3}
+      propertyPath: SoundTimeLength
+      value: 2.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481876943877619980, guid: e1451d99818bf714aa71fd44287af149, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481876943877619980, guid: e1451d99818bf714aa71fd44287af149, type: 3}
+      propertyPath: Pan2D
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481876943877619980, guid: e1451d99818bf714aa71fd44287af149, type: 3}
+      propertyPath: m_Pitch
+      value: 1.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481876943877619980, guid: e1451d99818bf714aa71fd44287af149, type: 3}
+      propertyPath: Priority
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481876943877619980, guid: e1451d99818bf714aa71fd44287af149, type: 3}
+      propertyPath: m_Volume
+      value: 0.548
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481876943877619980, guid: e1451d99818bf714aa71fd44287af149, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f8bf606ea870c3741a8b21f9addab604, type: 3}
     - target: {fileID: 8289689977269336043, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: healthBar
       value: 

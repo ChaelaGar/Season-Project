@@ -403,6 +403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PLAYER
       objectReference: {fileID: 0}
+    - target: {fileID: 2003483093011304341, guid: e1451d99818bf714aa71fd44287af149, type: 3}
+      propertyPath: orthographic size
+      value: 7.997227
+      objectReference: {fileID: 0}
     - target: {fileID: 2834359979775156719, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.4472082
@@ -447,6 +451,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 78022824be4cf0647b9c58521578324a, type: 3}
+    - target: {fileID: 5244156739679053739, guid: e1451d99818bf714aa71fd44287af149, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8289689977269336043, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: healthBar
       value: 
@@ -9233,7 +9241,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1587978525}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7b8299a56853b48498ac32433414a386, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10561,7 +10569,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1996552971}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7b8299a56853b48498ac32433414a386, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10597,7 +10605,7 @@ EdgeCollider2D:
   m_GameObject: {fileID: 1996552971}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7b8299a56853b48498ac32433414a386, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
