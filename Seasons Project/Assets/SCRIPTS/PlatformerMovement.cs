@@ -33,6 +33,11 @@ public class PlatformerMovemenrt : MonoBehaviour
     bool isMoving = false;
     [SerializeField]
     float SoundTimeLength = 1f;
+    [SerializeField]
+    float CoyoteTimer = 0.2f;
+    float CoyoteTime;
+    float GravTimer = 1f;
+    float GravTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,16 +50,15 @@ public class PlatformerMovemenrt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        CoyoteTime += Time.deltaTime;
+        GravTime += Time.deltaTime;
         float moveX = Input.GetAxis("Horizontal");
         Vector2 velocity = rb.velocity;
         velocity.x = moveX * moveSpeed;
         rb.velocity = velocity;
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump") && grounded || Input.GetButtonDown("Jump") && CoyoteTime <= CoyoteTimer)
         {
-            rb.AddForce(new Vector2(0, 100 * jumpSpeed));
-            grounded = false;
-            dJump = true;
+            JUMP();
         }
         else if (Input.GetButtonDown("Jump") && dJump == true)
         {
@@ -118,6 +122,7 @@ public class PlatformerMovemenrt : MonoBehaviour
         {
             grounded = true;
             slope = false;
+            CoyoteTime = 0;
         }
         if (collision.gameObject.layer == 7)
         {
@@ -138,5 +143,10 @@ public class PlatformerMovemenrt : MonoBehaviour
 
 
     }
-    
+    void JUMP()
+    {
+        rb.AddForce(new Vector2(0, 100 * jumpSpeed));
+        grounded = false;
+        dJump = true;
+    }
 }

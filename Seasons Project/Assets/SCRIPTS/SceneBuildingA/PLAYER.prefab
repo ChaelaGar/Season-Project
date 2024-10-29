@@ -483,6 +483,8 @@ MonoBehaviour:
   dJump: 0
   forceX: 100
   forceY: 0
+  SoundTimeLength: 1
+  CoyoteTimer: 0.1
 --- !u!95 &2194306197202086299
 Animator:
   serializedVersion: 5
