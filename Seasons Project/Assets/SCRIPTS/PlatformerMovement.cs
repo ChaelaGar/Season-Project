@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlatformerMovemenrt : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class PlatformerMovemenrt : MonoBehaviour
     [SerializeField]
     float CoyoteTimer = 0.2f;
     float CoyoteTime;
+    float jumpHeight;
     float GravTimer = 1f;
     float GravTime;
     // Start is called before the first frame update
