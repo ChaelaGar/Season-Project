@@ -31,7 +31,7 @@ public class EnemyAttack : MonoBehaviour
     {
 
      
-      if (timer >= attackTime && collision.gameObject.tag == "Player" && /*Mhealth.isDead != true*/)
+      //if (timer >= attackTime && collision.gameObject.tag == "Player" && /*Mhealth.isDead != true*/)
         {
             //StartCoroutine(PlayAnimation());
             Debug.Log("BAM");
@@ -43,7 +43,7 @@ public class EnemyAttack : MonoBehaviour
    
    /* IEnumerator PlayAnimation()
     {
-        animator.Play("attack");
+        animator.Play("idle");
         yield return new WaitForSeconds(AnimationTimeLength);
         animator.Play("Idle");
     }*/
