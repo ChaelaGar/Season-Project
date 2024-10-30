@@ -719,6 +719,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 439286676084161541, guid: 949d2c43e4265d0499a9fecc9d618a8c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -423922754, guid: 39d9f8d013efd824e930f452b19675da, type: 3}
     - target: {fileID: 1288051201898522367, guid: 949d2c43e4265d0499a9fecc9d618a8c, type: 3}
       propertyPath: m_Name
       value: Flying
