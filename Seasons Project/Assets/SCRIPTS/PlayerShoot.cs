@@ -64,39 +64,25 @@ public class PlayerShoot : MonoBehaviour
             if (bulletAmount <= 0)
             {
                 bulletEnabled = false;
-                if (Input.GetKey(KeyCode.R) && shootingEnabled == true)
-                {
-                    StartCoroutine(PlayLAnimation());
-                    bulletEnabled = true;
-                    bulletAmount = 10;
-                    shootingReloads -= 1;
-                }
-                else
-                {
-                    if (shootingReloads <= 0)
-                    {
-                        shootingEnabled = false;
-                    }
-                }
+              
             }
         }
         anim.SetBool("atk", isShooting);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "AmmoPack" && shootingReloads <= 0 && bulletAmount <= 0 && shootingEnabled == false && bulletEnabled == false)
-        {
-            
-            shootingReloads = 3;
-            shootingEnabled = true;
-            bulletEnabled = true;
-            bulletAmount = 10;
-        }
+        if (collision.gameObject.tag == "AmmoPack")
+            {
+                Destroy(collision.gameObject);
+                bulletAmount += 10;
+            }
     }
+   
+   
     private IEnumerator PlayLAnimation()
     {
         anim.Play("LouisThrow");
         yield return new WaitForSeconds(AnimTimeLength);
-
+        anim.Play("idle");
     }
 }

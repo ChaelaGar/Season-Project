@@ -14,12 +14,13 @@ public class PlantMunchAttack : MonoBehaviour
     Animator animator;
     [SerializeField]
     float AnimationTimeLength = 0.2f;
+    SpriteRenderer SR;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        
+        SR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame

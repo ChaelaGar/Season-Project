@@ -37,7 +37,8 @@ public class PlatformerMovemenrt : MonoBehaviour
     [SerializeField]
     float CoyoteTimer = 0.2f;
     float CoyoteTime;
-    float jumpHeight;
+    float JumpCharge;
+    float JumpChargeLimit = 10f;
     float GravTimer = 1f;
     float GravTime;
     // Start is called before the first frame update
@@ -58,15 +59,25 @@ public class PlatformerMovemenrt : MonoBehaviour
         Vector2 velocity = rb.velocity;
         velocity.x = moveX * moveSpeed;
         rb.velocity = velocity;
-        if (Input.GetButtonDown("Jump") && grounded || Input.GetButtonDown("Jump") && CoyoteTime <= CoyoteTimer)
+        if (Input.GetButton("Jump") && grounded)
+        {
+            
+            JumpCharge += Time.deltaTime;
+            if (JumpCharge > JumpChargeLimit)
+            {
+                JumpCharge = JumpChargeLimit;
+            }
+
+        }
+        else if (Input.GetButtonUp("Jump") && grounded || Input.GetButtonUp("Jump") && CoyoteTime <= CoyoteTimer)
         {
             JUMP();
         }
-        else if (Input.GetButtonDown("Jump") && dJump == true)
+        /*else if (Input.GetButtonDown("Jump") && dJump == true)
         {
             rb.AddForce(new Vector2(0, 100 * jumpSpeed));
             dJump = false;
-        }
+        }*/
         if (Input.GetButton("Fire3"))
         {
             velocity.x = moveX * sprintSpeed;
@@ -150,8 +161,9 @@ public class PlatformerMovemenrt : MonoBehaviour
     }
     void JUMP()
     {
-        rb.AddForce(new Vector2(0, 100 * jumpSpeed));
+        rb.AddForce(new Vector2(0, JumpCharge + 100 * jumpSpeed));
         grounded = false;
         dJump = true;
+        JumpCharge = 0;
     }
 }
