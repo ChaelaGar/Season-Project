@@ -41,6 +41,8 @@ public class PlatformerMovemenrt : MonoBehaviour
     float JumpChargeLimit = 150f;
     float GravTimer = 1f;
     float GravTime;
+    [SerializeField]
+    float DefaultGravity = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,20 +61,17 @@ public class PlatformerMovemenrt : MonoBehaviour
         Vector2 velocity = rb.velocity;
         velocity.x = moveX * moveSpeed;
         rb.velocity = velocity;
-        /*if (Input.GetButton("Jump") && grounded)
+        if (Input.GetButtonUp("Jump"))
         {
 
-            JumpCharge += 50 * Time.deltaTime;
-           
-           if (JumpCharge > JumpChargeLimit)
-            {
-                JumpCharge = JumpChargeLimit;
-            }
-        
-        }*/
-       if (Input.GetButtonDown("Jump") && grounded || Input.GetButtonUp("Jump") && CoyoteTime <= CoyoteTimer)
+            GravTimer = DefaultGravity * 5;
+            rb.gravityScale = GravTimer;
+        }
+       if (Input.GetButton("Jump") && grounded || Input.GetButton("Jump") && CoyoteTime <= CoyoteTimer)
         {
             JUMP();
+            GravTimer -= Time.deltaTime;
+           
         }
         /*else if (Input.GetButtonDown("Jump") && dJump == true)
         {
@@ -99,7 +98,7 @@ public class PlatformerMovemenrt : MonoBehaviour
         }
         if (grounded == true || slope == false)
         {
-            rb.gravityScale = 1f;
+            rb.gravityScale = DefaultGravity;
         }
         else if (slope == true)
         {
@@ -163,6 +162,7 @@ public class PlatformerMovemenrt : MonoBehaviour
     }
     void JUMP()
     {
+        rb.gravityScale = GravTimer; 
         rb.AddForce(new Vector2(0, 100 * jumpSpeed));
         grounded = false;
         dJump = true;

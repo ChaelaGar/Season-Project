@@ -30,17 +30,17 @@ public class EnemyHealth : MonoBehaviour
             enemyHealth = enemyHealth -= 1;
             
         }
-        /* else if (enemyHealth < 1)
+        else if (enemyHealth < 1)
           {
             //  isDead = true;
              // StartCoroutine(PlayAnimationDead());
 
            //>PLACEHOLDER SCRIPT BELOW, USE IF NO ANIMATION<
 
-        //Destroy(gameObject);
-          }*/
+        Destroy(gameObject);
+          }
     }
-   /* IEnumerator PlayAnimationHurt()
+  /*  IEnumerator PlayAnimationHurt()
     {
         animator.Play("hurt");
         yield return new WaitForSeconds(AnimationTimeLength);
