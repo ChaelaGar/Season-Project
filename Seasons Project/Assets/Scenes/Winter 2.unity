@@ -1876,6 +1876,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flag
       objectReference: {fileID: 0}
+    - target: {fileID: 694740127053762296, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8469238
+      objectReference: {fileID: 0}
+    - target: {fileID: 694740127053762296, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1130531
+      objectReference: {fileID: 0}
+    - target: {fileID: 694740127053762296, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.72978973
+      objectReference: {fileID: 0}
+    - target: {fileID: 694740127053762296, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.055558085
+      objectReference: {fileID: 0}
     - target: {fileID: 1809796318111705013, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
       propertyPath: m_LocalScale.y
       value: 4.7263
@@ -1919,6 +1935,10 @@ PrefabInstance:
     - target: {fileID: 1809796318111705013, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147461358817846638, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
+      propertyPath: leveltoload
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 5491319904995659022, guid: bda619a5282ffa440ba97ee4f1de8814, type: 3}
       propertyPath: m_Color.a
