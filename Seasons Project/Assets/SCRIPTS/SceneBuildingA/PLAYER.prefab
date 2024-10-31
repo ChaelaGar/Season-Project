@@ -68,8 +68,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 34
-  orthographic: 1
+  field of view: 74.2
+  orthographic: 0
   orthographic size: 4.7862415
   m_Depth: -1
   m_CullingMask:
@@ -484,6 +484,8 @@ MonoBehaviour:
   forceY: 0
   SoundTimeLength: 1
   CoyoteTimer: 0.1
+  DefaultGravity: 1
+  antiGravLimit: 1
 --- !u!95 &2194306197202086299
 Animator:
   serializedVersion: 5
