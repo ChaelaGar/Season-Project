@@ -43,6 +43,8 @@ public class PlatformerMovemenrt : MonoBehaviour
     float GravTime;
     [SerializeField]
     float DefaultGravity = 1f;
+    [SerializeField]
+    float antiGravLimit = 3.9f;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,7 +73,10 @@ public class PlatformerMovemenrt : MonoBehaviour
         {
             JUMP();
             GravTimer -= Time.deltaTime;
-           
+           if (GravTimer < antiGravLimit)
+            {
+                GravTimer = antiGravLimit;
+            }
         }
         /*else if (Input.GetButtonDown("Jump") && dJump == true)
         {
@@ -163,7 +168,7 @@ public class PlatformerMovemenrt : MonoBehaviour
     void JUMP()
     {
         rb.gravityScale = GravTimer; 
-        rb.AddForce(new Vector2(0, 100 * jumpSpeed));
+        rb.AddForce(new Vector2(0, 10 * jumpSpeed));
         grounded = false;
         dJump = true;
         
