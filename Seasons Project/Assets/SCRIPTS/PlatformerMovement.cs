@@ -66,11 +66,11 @@ public class PlatformerMovemenrt : MonoBehaviour
 
         if (Input.GetButton("Jump") && grounded || Input.GetButton("Jump") && CoyoteTime <= CoyoteTimer)
         {
-            GravTimer -= Time.deltaTime;
+           /* GravTimer -= Time.deltaTime;
             if (GravTimer < antiGravLimit)
             {
                 GravTimer = antiGravLimit;
-            }
+            }*/
             JUMP();
 
         }
@@ -169,7 +169,7 @@ public class PlatformerMovemenrt : MonoBehaviour
     }
     void JUMP()
     {
-        rb.gravityScale = DefaultGravity - GravTimer;
+       // rb.gravityScale = DefaultGravity - GravTimer;
         rb.AddForce(new Vector2(0, 10 * jumpSpeed));
         grounded = false;
         dJump = true;
