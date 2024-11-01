@@ -16,15 +16,19 @@ public class PlayerMovementFun : MonoBehaviour
     //Gravity related crud
     [SerializeField]
     float defaultGravity = 1.5f;
+    [SerializeField]
     float fallStrength = 3f;
+    [SerializeField]
     float slideSpeed = 35f;
-    float slideMomentum = 0f;
+    float slideMomentum;
 
     //Timers
     [SerializeField]
-    float CoyoteTimer = 0.2f;
-    float CoyoteTime;
-
+    float coyoteTimer = 0.2f;
+    float coyoteTime;
+    [SerializeField]
+    float jumpGraceTimer = 0.1f;
+    float jumpGraceTime = 1000f;
     //Bools
     [SerializeField]
     bool grounded = false;
@@ -60,7 +64,7 @@ public class PlayerMovementFun : MonoBehaviour
             walkSpeed = defaultWalkSpeed;
         }
         //jumping things
-        if (Input.GetButtonDown("Jump") && grounded || Input.GetButtonDown("Jump") && CoyoteTime <= CoyoteTimer && y <= 0)
+        if (Input.GetButtonDown("Jump") && grounded || Input.GetButtonDown("Jump") && coyoteTime <= coyoteTimer && y <= 0 || grounded && jumpGraceTime <= jumpGraceTimer)
         {
             Jump();
         }
@@ -68,9 +72,14 @@ public class PlayerMovementFun : MonoBehaviour
         {
             rb.gravityScale = fallStrength;
         }
+        else if (Input.GetButtonDown("Jump") && !grounded)
+        {
+            jumpGraceTime = 0;
+        }
 
         //Timers
-        CoyoteTime += Time.deltaTime;
+        coyoteTime += Time.deltaTime;
+        jumpGraceTime += Time.deltaTime;
 
         //anime stuff
         Animation();
@@ -81,7 +90,7 @@ public class PlayerMovementFun : MonoBehaviour
         if (collision.gameObject.layer == 6)
         {
             grounded = false;
-            CoyoteTime = 0;
+            coyoteTime = 0;
         }
         else if (collision.gameObject.layer == 7)
         {
@@ -96,7 +105,7 @@ public class PlayerMovementFun : MonoBehaviour
         {
             rb.gravityScale = defaultGravity;
             grounded = true;
-            slide = false;
+           
 
         }
         if (collision.gameObject.layer == 7)

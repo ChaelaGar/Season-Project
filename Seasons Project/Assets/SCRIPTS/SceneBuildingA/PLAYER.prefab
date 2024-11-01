@@ -249,9 +249,9 @@ GameObject:
   - component: {fileID: 4653729773479939604}
   - component: {fileID: 8289689977269336043}
   - component: {fileID: 8307623572208805132}
-  - component: {fileID: 2966987845262270232}
   - component: {fileID: 2194306197202086299}
   - component: {fileID: 5481876943877619980}
+  - component: {fileID: 5478515580903343493}
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Player
@@ -339,7 +339,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1.8
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 1
   m_GravityScale: 4
@@ -462,30 +462,6 @@ MonoBehaviour:
   shootingReloads: 3
   BulletPackPickup: 0
   isShooting: 0
---- !u!114 &2966987845262270232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044909005808068312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ed249d98c25644fa3e6239fadf07e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  sprintSpeed: 10
-  jumpSpeed: 4
-  slideSpeed: 40
-  grounded: 0
-  dJump: 0
-  forceX: 100
-  forceY: 0
-  SoundTimeLength: 1
-  CoyoteTimer: 0.1
-  DefaultGravity: 1
-  antiGravLimit: 1
 --- !u!95 &2194306197202086299
 Animator:
   serializedVersion: 5
@@ -603,3 +579,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5478515580903343493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044909005808068312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1825b6bc07012fc48b580d2e7cecad12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 7
+  sprintSpeed: 10
+  jumpSpeed: 5
+  defaultGravity: 1.5
+  fallStrength: 3
+  slideSpeed: 35
+  coyoteTimer: 0.2
+  jumpGraceTimer: 0.1
+  grounded: 0
