@@ -49,8 +49,7 @@ public class PlatformerMovemenrt : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        spre = GetComponent<SpriteRenderer>();
+       
         audioSrc = GetComponent<AudioSource>();
     }
 

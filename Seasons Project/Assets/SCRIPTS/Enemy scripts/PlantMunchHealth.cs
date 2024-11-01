@@ -12,6 +12,9 @@ public class PlantMunchHealth : MonoBehaviour
     Animator animator;
     float AnimationTimeLength = 0.2f;
     public bool isDead = false;
+    float hurtTimer;
+    float hurtCoolDown = 0.5f;
+    public LouisAttack attack;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -20,15 +23,15 @@ public class PlantMunchHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        hurtTimer += Time.deltaTime;
     }
-    private void OnTriggerEnter2D(UnityEngine.Collider2D collision)
+    private void OnTriggerStay2D(UnityEngine.Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player ammo" && enemyHealth > 0)
+        if (collision.gameObject.tag == "AOA" && enemyHealth > 0 && hurtTimer >= hurtCoolDown && attack.isAttacking)
         {
             StartCoroutine(PlayAnimationHurt());
             enemyHealth = enemyHealth -= 1;
-            
+            hurtTimer = 0f;
         }
        else if (enemyHealth < 1)
         {

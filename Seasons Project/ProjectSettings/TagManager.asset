@@ -11,6 +11,7 @@ TagManager:
   - CheckPoint
   - Flag
   - Player ammo
+  - AOA
   layers:
   - Default
   - TransparentFX
