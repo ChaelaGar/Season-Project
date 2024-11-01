@@ -13,7 +13,7 @@ public class PlantMunchHealth : MonoBehaviour
     float AnimationTimeLength = 0.2f;
     public bool isDead = false;
     float hurtTimer;
-    float hurtCoolDown = 0.5f;
+    float hurtCoolDown = 0.1f;
     public LouisAttack attack;
     void Start()
     {

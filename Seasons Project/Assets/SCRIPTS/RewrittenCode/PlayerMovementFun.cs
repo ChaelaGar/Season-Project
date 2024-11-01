@@ -33,9 +33,10 @@ public class PlayerMovementFun : MonoBehaviour
     [SerializeField]
     bool grounded = false;
     bool slide = false;
+    public bool isFlipped = false;
     //Components 
     Rigidbody2D rb;
-    Animator anim;
+    public Animator anim;
     SpriteRenderer spre;
 
     // Start is called before the first frame update
@@ -139,10 +140,12 @@ public class PlayerMovementFun : MonoBehaviour
         if (x > 0)
         {
             spre.flipX = false;
+            isFlipped = false;
         }
         else if (x < 0)
         {
             spre.flipX = true;
+            isFlipped = true;
         }
     }
 }

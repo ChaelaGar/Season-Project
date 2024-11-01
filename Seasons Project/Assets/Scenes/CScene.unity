@@ -408,8 +408,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5048093, y: 0}
-  m_Size: {x: 1.7461052, y: 1.9572551}
+  m_Offset: {x: 0.10375839, y: -0.03646303}
+  m_Size: {x: 0.7813569, y: 0.94844323}
   m_Direction: 0
 --- !u!114 &543102083
 MonoBehaviour:
@@ -425,6 +425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDmg: 2
   isAttacking: 0
+  movFun: {fileID: 1711595321}
   coolDownTime: 0.5
   attackDuration: 0.5
 --- !u!1001 &781538068
@@ -13712,8 +13713,13 @@ MonoBehaviour:
   sprintSpeed: 10
   jumpSpeed: 4
   defaultGravity: 1.5
-  CoyoteTimer: 0.5
+  fallStrength: 3
+  slideSpeed: 35
+  coyoteTimer: 0.2
+  jumpGraceTimer: 0.1
   grounded: 0
+  isFlipped: 0
+  anim: {fileID: 0}
 --- !u!61 &1711595322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13751,7 +13757,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -13835,12 +13841,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1066758891, guid: a70525fd41631264b8a00510731615f0, type: 3}
+  m_Sprite: {fileID: 566299306, guid: a70525fd41631264b8a00510731615f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

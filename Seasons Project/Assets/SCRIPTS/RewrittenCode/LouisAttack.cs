@@ -9,17 +9,19 @@ public class LouisAttack : MonoBehaviour
     float attackDmg = 2f;
 
     public bool isAttacking = false;
-
+    public PlayerMovementFun movFun;
     float coolDown;
     [SerializeField]
     float coolDownTime = 0.5f;
     float attackTime;
     [SerializeField]
     float attackDuration = 1f;
+
+    Transform form;
     // Start is called before the first frame update
     void Start()
     {
-       
+        form = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,14 @@ public class LouisAttack : MonoBehaviour
         {
             Debug.Log("Staph");
             isAttacking = false;
+        }
+        if (movFun.isFlipped)
+        {
+            form.Rotate(0f, 180f, 0f);
+        }
+        else if (!movFun.isFlipped)
+        {
+            form.Rotate(0f, 0f, 0f);
         }
     }
 }
