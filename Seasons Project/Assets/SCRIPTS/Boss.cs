@@ -15,6 +15,7 @@ public class Boss : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
+        anim.SetBool("IsShooting", true);
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class Boss : MonoBehaviour
         {
             
 
-            if (timer > 2)
+            if (timer > 0.75)
             {
                 timer = 0;
                 shoot();
