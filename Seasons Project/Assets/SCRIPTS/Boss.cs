@@ -9,6 +9,7 @@ public class Boss : MonoBehaviour
     private Animator anim;
     private float timer;
     private GameObject player;
+    
 
     // Start is called before the first frame update
     void Start()
