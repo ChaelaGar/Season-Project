@@ -9,7 +9,7 @@ public class Boss : MonoBehaviour
     private Animator anim;
     private float timer;
     private GameObject player;
-    
+    public Buttons Destroyed;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,14 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Destroyed.buttonsDestroyed == 3) 
+        {
+            Debug.Log("string");
+        
+        }
+
+
 
         timer += Time.deltaTime;
         float distance = Vector2.Distance(transform.position, player.transform.position);

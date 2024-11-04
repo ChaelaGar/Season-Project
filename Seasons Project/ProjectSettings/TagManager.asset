@@ -12,6 +12,7 @@ TagManager:
   - Flag
   - Player ammo
   - AOA
+  - button
   layers:
   - Default
   - TransparentFX
