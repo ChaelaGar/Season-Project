@@ -9,7 +9,8 @@ public class Boss : MonoBehaviour
     private Animator anim;
     private float timer;
     private GameObject player;
-    public Buttons Destroyed;
+    
+   public int buttonspressed;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +23,13 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+      Debug.Log(buttonspressed);
 
-        if (Destroyed.buttonsDestroyed == 3) 
+        if (buttonspressed >= 3)
         {
-            Debug.Log("string");
-        
+            Destroy(gameObject);
         }
-
 
 
         timer += Time.deltaTime;

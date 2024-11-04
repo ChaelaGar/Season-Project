@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
-    public int buttonsDestroyed = 0;
+    public Boss buttonsdead;
     
     // Start is called before the first frame update
     void Start()
@@ -18,12 +18,12 @@ public class Buttons : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.CompareTag("button"))
+        if (collision.gameObject.tag == "Player")
         {
-            buttonsDestroyed += 1;
-            Destroy(other.gameObject);
+            buttonsdead.buttonspressed += 1;
+            Destroy(gameObject);
         }
     }
 
