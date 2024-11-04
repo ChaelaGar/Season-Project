@@ -14,6 +14,11 @@ public class PlayerHealth : MonoBehaviour
     float healthRestart = 10;
     [SerializeField]
     Image healthBar;
+
+    // timers
+    float hitTimer = 0f;
+    [SerializeField]
+    float hitTime = 0.2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        hitTime = Time.deltaTime;
         healthBar.fillAmount = health / maxHP;
         if (health <= 0)
         {
@@ -64,7 +70,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log(collision.gameObject.name);
         // IF we hit an enemy, reduce player HP
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && hitTime >= hitTimer) ;
         {
             health -= 1;
             healthBar.fillAmount = health / maxHP;
