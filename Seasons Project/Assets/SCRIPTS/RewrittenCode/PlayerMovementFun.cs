@@ -29,15 +29,23 @@ public class PlayerMovementFun : MonoBehaviour
     [SerializeField]
     float jumpGraceTimer = 0.1f;
     float jumpGraceTime = 1000f;
+    float AnimationTimeLength = 0.2f;
+
     //Bools
     [SerializeField]
     bool grounded = false;
     bool slide = false;
-    public bool isFlipped = false;
+    bool atking;
+   
     //Components 
     Rigidbody2D rb;
     public Animator anim;
     SpriteRenderer spre;
+
+    //Public References
+    public bool isFlipped = false;
+    public LouisAttack atk;
+
 
     // Start is called before the first frame update
     void Start()
@@ -78,6 +86,7 @@ public class PlayerMovementFun : MonoBehaviour
             jumpGraceTime = 0;
         }
 
+       
         //Timers
         coyoteTime += Time.deltaTime;
         jumpGraceTime += Time.deltaTime;
@@ -135,6 +144,7 @@ public class PlayerMovementFun : MonoBehaviour
         anim.SetFloat("y", y);
         anim.SetBool("grounded", grounded);
         anim.SetBool("slope", slide);
+    
         int x = (int)Input.GetAxisRaw("Horizontal");
         anim.SetInteger("x", x);
         if (x > 0)
@@ -147,5 +157,7 @@ public class PlayerMovementFun : MonoBehaviour
             spre.flipX = true;
             isFlipped = true;
         }
+     
     }
+  
 }
