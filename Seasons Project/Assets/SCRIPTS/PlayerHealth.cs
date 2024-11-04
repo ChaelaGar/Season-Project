@@ -60,4 +60,23 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        // IF we hit an enemy, reduce player HP
+        if (collision.gameObject.tag == "Enemy")
+        {
+            health -= 1;
+            healthBar.fillAmount = health / maxHP;
+            //add consequences
+            //IF health gets too low, reload the current level
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                //SceneManager.LoadScene(levelToLoad);
+            }
+        }
+    }
+
 }
+
