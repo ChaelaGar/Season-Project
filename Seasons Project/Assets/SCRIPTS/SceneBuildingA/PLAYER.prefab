@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7510378352256595396}
   m_Layer: 0
   m_Name: AOA
-  m_TagString: Untagged
+  m_TagString: AOA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,10 +81,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDmg: 2
-  isAttacking: 0
-  movFun: {fileID: 0}
+  movFun: {fileID: 5478515580903343493}
   coolDownTime: 0.5
   attackDuration: 1
+  isAttacking: 0
 --- !u!1 &834788415626311505
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +333,6 @@ GameObject:
   - component: {fileID: 8021484010600050026}
   - component: {fileID: 4653729773479939604}
   - component: {fileID: 8289689977269336043}
-  - component: {fileID: 8307623572208805132}
   - component: {fileID: 2194306197202086299}
   - component: {fileID: 5481876943877619980}
   - component: {fileID: 5478515580903343493}
@@ -526,28 +525,6 @@ MonoBehaviour:
   levelToLoad: Lose
   healthRestart: 10
   healthBar: {fileID: 0}
---- !u!114 &8307623572208805132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044909005808068312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26c67b83c2dc5b42bb01d8d73177697, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 2156281582285168566, guid: 7224601a4168a6b4084fb67fe3496328, type: 3}
-  bulletSpeed: 10
-  bulletLifetime: 2
-  shootDelay: 0.3
-  bulletAmount: 10
-  bulletEnabled: 1
-  shootingEnabled: 1
-  shootingReloads: 3
-  BulletPackPickup: 0
-  isShooting: 0
 --- !u!95 &2194306197202086299
 Animator:
   serializedVersion: 5
@@ -686,5 +663,6 @@ MonoBehaviour:
   coyoteTimer: 0.2
   jumpGraceTimer: 0.1
   grounded: 0
-  isFlipped: 0
   anim: {fileID: 0}
+  isFlipped: 0
+  atk: {fileID: 0}

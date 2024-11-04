@@ -14,6 +14,7 @@ public class PlantMunchHealth : MonoBehaviour
     public bool isDead = false;
     float hurtTimer;
     float hurtCoolDown = 0.1f;
+    [SerializeField]
     public LouisAttack attack;
     void Start()
     {
