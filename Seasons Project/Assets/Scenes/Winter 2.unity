@@ -294,14 +294,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5235849, g: 1, b: 0.5991093, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7f046c25c5b0d8b4da6a616fe032f96e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31eb978e22c7cf3488d548dedde2d964, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -330,6 +330,10 @@ PrefabInstance:
     - target: {fileID: 1044909005808068312, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: m_Name
       value: PLAYER
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003483093011304341, guid: e1451d99818bf714aa71fd44287af149, type: 3}
+      propertyPath: field of view
+      value: 57.324703
       objectReference: {fileID: 0}
     - target: {fileID: 2834359979775156719, guid: e1451d99818bf714aa71fd44287af149, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64124,14 +64128,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.4198113, b: 0.4198113, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7f046c25c5b0d8b4da6a616fe032f96e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a256c458eff7d2740b7e139482893268, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
