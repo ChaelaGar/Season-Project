@@ -9,7 +9,7 @@ public class LouisAttack : MonoBehaviour
     float attackDmg = 2f;
 
     
-    public PlayerMovementFun movFun;
+    
     float coolDown;
     [SerializeField]
     float coolDownTime = 0.5f;
@@ -18,6 +18,7 @@ public class LouisAttack : MonoBehaviour
     float attackDuration = 1f;
     //Public References
     public bool isAttacking = false;
+    public PlayerMovementFun movFun;
 
     Transform form;
     // Start is called before the first frame update

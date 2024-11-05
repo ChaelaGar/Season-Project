@@ -53,10 +53,7 @@ public class PlayerHealth : MonoBehaviour
                 //SceneManager.LoadScene(levelToLoad);
             }
         }
-        else if (collision.gameObject.tag == "Lava")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+       
         else
         {
             if (collision.gameObject.tag == "Win")
@@ -68,9 +65,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         // IF we hit an enemy, reduce player HP
-        if (collision.gameObject.tag == "Enemy" && hitTime >= hitTimer) ;
+        if (collision.gameObject.tag == "Enemy" && hitTime >= hitTimer)
         {
             health -= 1;
             healthBar.fillAmount = health / maxHP;
@@ -81,6 +77,10 @@ public class PlayerHealth : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 //SceneManager.LoadScene(levelToLoad);
             }
+        }
+        else if (collision.gameObject.layer == 10)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
