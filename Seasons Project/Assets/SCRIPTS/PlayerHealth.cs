@@ -66,7 +66,7 @@ public class PlayerHealth : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // IF we hit an enemy, reduce player HP
-        if (collision.gameObject.tag == "Enemy" && hitTime >= hitTimer)
+        if (collision.gameObject.tag == "Enemy" && hitTimer >= hitTime)
         {
             health -= 1;
             healthBar.fillAmount = health / maxHP;
